@@ -1,24 +1,18 @@
-cs = $ "body > div:nth-child(23) > pre"
-params = {
-  accepts:
-      text: "text/plain"
-      pgp: "application/pgp-keys"
-      vcard: "text/vcard"
-  error: (x) =>
-      cs.text 
-  }
-    
-pDisplay = (x) ->
-  exget = true
-  cs.show() unless cs.is(":visible")
-  switch x
-    when 0 then cs.load window.origin.hostname + "/cv/" #vcard output
-    when 1 then cs.load window.origin.hostname + "" #PGP key output
-    when 2 #hide the texbox! hide the textbox!
-      exget = false
-      cs.text("").hide()
+###
+CODE WORK IN PROGRESS
+HIGHLY SUBJECT TO CHANGE
+###
+cs = $ "#code"
+class display
+  constructor: (@x) -> 
+  handler: (dat,stat) ->
+    if (stat is 'success') then cs.text(dat);
+    else cs.text('An error occurred.')
+  run: () ->
+    if @x
+      #vcard output
+       cs.load window.origin.hostname + "/cv/archie.vcf", handler
     else
-      #can't happen
-      console.error "unknown value specified"
-      throw "unknownVal"
-  get.send() if exget
+      #PGP key output
+      cs.load window.origin.hostname + "/cv/archie.asc", handler
+    cs.slideDown 'normal' unless cs.is(":visible")

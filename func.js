@@ -1,48 +1,35 @@
-var cs, get, pDisplay;
+/*
+CODE WORK IN PROGRESS
+HIGHLY SUBJECT TO CHANGE
+*/
+var cs, display;
 
-cs = "body > div:nth-child(23) > code";
+cs = $("#code");
 
-get = new XMLHttpRequest();
-
-get.overrideMimeType("text/plain; charset=utf-8");
-
-get.addEventListener("load", () => {
-  if (this.status === 200) {
-    return $(cs).val(this.responseText);
-  } else {
-    console.error(this.statusText);
-    return $(cs).val(`Error: ${this.statusText}`);
+display = class display {
+  constructor(x) {
+    this.x = x;
   }
-});
 
-get.addEventListener("error", () => {
-  console.error(get.statusText);
-  throw "xhrERR";
-});
+  handler(dat, stat) {
+    if (stat === 'success') {
+      return cs.text(dat);
+    } else {
+      return cs.text('An error occurred.');
+    }
+  }
 
-pDisplay = function(x) {
-  var exget;
-  exget = true;
-  if (!$(cs).is(":visible")) {
-    $(cs).show();
+  run() {
+    if (this.x) {
+      //vcard output
+      cs.load(window.origin.hostname + "/cv/archie.vcf", handler);
+    } else {
+      //PGP key output
+      cs.load(window.origin.hostname + "/cv/archie.asc", handler);
+    }
+    if (!cs.is(":visible")) {
+      return cs.slideDown('normal');
+    }
   }
-  switch (x) {
-    case 0:
-      get.open("GET", "ArchieSullivan.vcf", false); //vcard output
-      break;
-    case 1:
-      get.open("GET", "ArchieSullivan.asc", false); //PGP key output
-      break;
-    case 2: //hide the texbox! hide the textbox!
-      exget = false;
-      $(cs).text("").hide();
-      break;
-    default:
-      //can't happen
-      console.error("unknown value specified");
-      throw "unknownVal";
-  }
-  if (exget) {
-    return get.send();
-  }
+
 };

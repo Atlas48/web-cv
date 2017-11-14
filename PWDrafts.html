@@ -7,14 +7,17 @@
 <script src="modernizr-custom.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Anton|Fira+Mono');
-
 table.GCSE td:nth-child(1), table.BTEC th {
 	font-weight: bold;
 	text-decoration:underline;
 }
+//Mini Definitions!
+table.GCSE td:nth-child(1)::after {content: ":";}
+.head { text-align: center; }
+#code {display:none;}
 </style>
-<script src="func.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="func.js">
 /*    
 @licstart  The following is the entire license notice for the 
 JavaScript code in this page.
@@ -38,18 +41,17 @@ through which recipients can access the Corresponding Source.
 @licend  The above is the entire license notice
 for the JavaScript code in this page.
 */
-var cs = "body > div:nth-child(23) > code";
 $(document).ready(function(e) {
-    $(cs).hide()
-	if (Modernizr.webp) {
-		$("div.head > img").attr("src", "archie.webp");
-	}
+    vcf = new display();
+	pg  = new display();
+	function hide() { if (cs.is(":visible") cs.slideUp('fast').text("");}
+	if (Modernizr.webp) $("div.head > img").attr("src", "archie.webp");
 });
 </script>
 </head>
 <body lang="EN-GB">
 <div class="head">
-<img src="archie.jpg" alt="A photo of me" />
+<img src="archie.jpg" alt="A photograph depictirng a potential client, Archie Sullivan." />
 <h1>Archie Sullivan</h1>
 </div>
 <h1>About</h1>
@@ -57,7 +59,7 @@ $(document).ready(function(e) {
 Archie is quick to get his ideas out and share them with the rest of the world.
 He is also quite a tinkerer primarily with Unix-based computers, often
 attempting to automate more complex tasks of production in order to make it
-easier for himself. </p>
+easier for himself.</p>
 <h2>Key Skills</h2>
 <ul>
 <li>Adept at using the more advanced tools of a computer's OS (especially that of Unix and Unix-like systems) to streamline workflow</li>
@@ -71,9 +73,9 @@ in in a very short deadline.</li>
 
 <h1>Education</h1>
 <p><b>Hundredof Hoo Academy</b></p>
-<p><i>(September 2&nbsp;– June 2015)</i></p>
+<p><i>(September 2 &ndash; June 2015)</i></p>
 <p><b>MidKent College</b></p>
-<p><i>(September 2015 – July 2016)</i></p>
+<p><i>(September 2015 &ndash; July 2016)</i></p>
 <p>7 GCSEs in total, at the following grades:</p>
 
 <table class="GCSE">
@@ -193,8 +195,8 @@ Display-in-Page:
 <button type="button" onClick="pDisplay(0)">vCard</button>
 <button type="button" onClick="pDisplay(1)">PGP Key</button>
 <button type="button" onClick="pDisplay(2)">Hide</button><br />
-<noscript>Unable to load: Browser has no javascript support, or has it disabled</noscript><br />
-<pre></pre>
+<noscript>Unable to load: Browser has no JavaScript support, or has it disabled</noscript><br />
+<pre id="code"></pre>
 </div>
 </body>
 </html>
