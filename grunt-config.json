@@ -1,7 +1,7 @@
 {
   "crawl": false,
   "customTests": [],
-  "dest": "/PATH/TO/modernizr-output.js",
+  "dest": "modernizr-output.js",
   "tests": [
     "fontface",
     "webp",
