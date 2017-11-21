@@ -1,7 +1,5 @@
-/*
-CODE WORK IN PROGRESS
-HIGHLY SUBJECT TO CHANGE
-*/
+/* CODE WORK IN PROGRESS
+HIGHLY SUBJECT TO CHANGE */
 var cs, display;
 
 cs = $("#code");
@@ -11,21 +9,21 @@ display = class display {
     this.x = x;
   }
 
-  handler(dat, stat) {
+  handler(dat, stat, xhr) {
     if (stat === 'success') {
       return cs.text(dat);
     } else {
-      return cs.text('An error occurred.');
+      return cs.text(`An error occurred: ${xhr.status} ${xhr.statusText}.`);
     }
   }
 
   run() {
     if (this.x) {
       //vcard output
-      cs.load(window.origin.hostname + "/cv/archie.vcf", handler);
+      cs.load(window.origin.hostname + "/cv/archie.vcf", super.handler);
     } else {
       //PGP key output
-      cs.load(window.origin.hostname + "/cv/archie.asc", handler);
+      cs.load(window.origin.hostname + "/cv/archie.asc", super.handler);
     }
     if (!cs.is(":visible")) {
       return cs.slideDown('normal');

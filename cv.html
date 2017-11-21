@@ -12,8 +12,9 @@ table.GCSE td:nth-child(1), table.BTEC th {
 	text-decoration:underline;
 }
 //Mini Definitions!
-table.GCSE td:nth-child(1)::after {content: ":";}
+table.GCSE td:nth-child(1)::after, table.BTEC th {content: ":";}
 .head { text-align: center; }
+.head h1 { padding-left:auto; }
 #code {display:none;}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -41,14 +42,15 @@ through which recipients can access the Corresponding Source.
 @licend  The above is the entire license notice
 for the JavaScript code in this page.
 */
+vcf = new display(true);
+pgp = new display(false);
 $(document).ready(function(e) {
-    vcf = new display(true);
-    pg  = new display(false);
     function hide() { if (cs.is(":visible") cs.slideUp('fast').text("");}
     if (Modernizr.webp) $("div.head > img").attr("src", "archie.webp");
 });
 </script>
 </head>
+<!--And begin!-->
 <body lang="EN-GB">
 <div class="head">
 <img src="archie.jpg" alt="A photograph depictirng a potential employee, Archie Sullivan." />
@@ -62,114 +64,52 @@ attempting to automate more complex tasks of production in order to make it
 easier for himself.</p>
 <h2>Key Skills</h2>
 <ul>
-<li>Adept at using the more advanced tools of a computer's OS (especially that of Unix and Unix-like systems) to streamline workflow</li>
-<li>Self-described as having an "All-Consuming Imagination”, with a tendency to create grand works of fiction and solutions to
+<li>Adept at using the more advanced tools of a computer's OS (especially that of Unix and Unix-like systems) to streamline
+workflow</li>
+<li>Self-described as having an "All-Consuming Imagination", with a tendency to create grand works of fiction and solutions to
 problems seemingly on-the-fly.</li>
 <li>Once helped my father work around an issue with the work server that meant he could submit important documents that had to be
 in in a very short deadline.</li>
 </ul>
 
 <h1>Education</h1>
-<p><b>Hundred of Hoo Academy</b></p>
-<p><i>(September 2 &ndash; June 2015)</i></p>
-<p><b>MidKent College</b></p>
-<p><i>(September 2015 &ndash; July 2016)</i></p>
+<p><b>Hundred of Hoo Academy</b>: <u>(September 2 &ndash; June 2015)</u></p>
+<p><b>MidKent College</b>: <u>(September 2015 &ndash; July 2016)</u></p>
 <p>7 GCSEs in total, at the following grades:</p>
 
 <table class="GCSE">
-<tr>
-  <td>English Language</td>
-  <td>B</td>
-</tr>
- <tr >
-  <td>English Literature</td>
-  <td>C</td>
- </tr>
- <tr>
-  <td>Core Science</td>
-  <td>C</td>
- </tr>
- <tr>
-  <td>Additional Science</td>
-  <td>C</td>
- </tr>
- <tr >
-  <td>Computing</td>
-  <td>B</td>
- </tr>
- <tr>
-  <td>History</td>
-  <td>C</td>
- </tr>
- <tr> 
-   <td>ICT</td>
-  <td>C</td>
- </tr>
- <tr>
-  <td>Maths</td>
-  <td>D</td>
- </tr>
+<tr><td>English Language</td><td>B</td></tr>
+<tr><td>English Literature</td><td>C</td></tr>
+<tr><td>Core Science</td><td>C</td></tr>
+<tr><td>Additional Science</td><td>C</td></tr>
+<tr><td>Computing</td><td>B</td></tr>
+<tr><td>History</td><td>C</td></tr>
+<tr><td>ICT</td><td>C</td></tr>
+<tr><td>Maths</td><td>D</td></tr>
 </table>
+
 <p>I also have the following grades in a Subsidiary Diploma in Creative Media Production</p>
+
 <table class="BTEC">
-<tr>
-<th>UNIT REF</th>
-<th>TITLE</th>
-<th>CREDIT VALUE AT LEVEL</th>
-<th>GRADE</th>
- </tr>
- <tr>
-<td>J/502/5964</td>
-<td>PRE-PRODUCTION TECHNOLOGIES FOR THE CREATIVE MEDIA
-INDUSTRIES</td>
-<td>5.0</td>
-<td>3</td>
-<td>PASS</td>
- </tr>
- <tr >
-<td>Y/600/6609</td>
-<td>COMMUNICATION SKILLS FOR THE CREATIVE MEDIA
-PRODUCTION</td>
-<td>5.0</td>
-<td>3</td>
-<td>MERIT</td>
- </tr>
- <tr>
-<td>M/600/6681</td>
-<td>UNDERSTANDING THE CREATIVE MEDIA SECTOR</td>
-<td>10.0</td>
-<td>3</td>
-<td>PASS</td>
- </tr>
- <tr >
-<td>H/600/6611</td>
-<td>FACTUAL PROGRAMME PRODUCTION TECHNIQUES FOR TELEVISION</td>
-<td>10.0</td>
-<td>3</td>
-<td>PASS</td>
- </tr>
- <tr >
-<td>R/600/6611</td>
-<td>CORPORATE AND PROMOTIONAL PROGRAMME PRODUCTION</td>
-<td>10.0</td>
-<td>3</td>
-<td>PASS</td>
-</tr>
-<tr>
-<td>D/600/6613</td>
-<td>DESIGNING IDENTS FOR TELEVISION</td>
-<td>10.0</td>
-<td>3</td>
-<td>PASS</td>
-</tr>
+<tr><th>UNIT REF</th><th>TITLE</th><th>CREDIT VALUE AT LEVEL</th><th>GRADE</th></tr>
+<tr><td>J/502/5964</td><td>PRE-PRODUCTION TECHNOLOGIES FOR THE CREATIVE MEDIA
+INDUSTRIES</td><td>5.0</td><td>3</td><td>PASS</td></tr>
+<tr><td>Y/600/6609</td><td>COMMUNICATION SKILLS FOR THE CREATIVE MEDIA PRODUCTION</td><td>5.0</td><td>3</td><td>MERIT</td></tr>
+<tr><td>M/600/6681</td><td>UNDERSTANDING THE CREATIVE MEDIA SECTOR</td><td>10.0</td><td>3</td><td>PASS</td></tr>
+<tr><td>H/600/6611</td><td>FACTUAL PROGRAMME PRODUCTION TECHNIQUES FOR TELEVISION</td><td>10.0</td><td>3</td><td>PASS</td></tr>
+<tr><td>R/600/6611</td><td>CORPORATE AND PROMOTIONAL PROGRAMME PRODUCTION</td><td>10.0</td><td>3</td><td>PASS</td></tr>
+<tr><td>D/600/6613</td><td>DESIGNING IDENTS FOR TELEVISION</td><td>10.0</td><td>3</td><td>PASS</td></tr>
 </table>
 
 <h1>Hobbies &amp; Interests</h1>
-<p><span>I am constantly tinkering around with computers and doing various projects with them (such as making a podcast generation software
-written in Python, </span><a href="https://bitbucket.org/AtlasJan/pcc">PCC</a>, it's still a work-in-progress, though), I am also attempting a project of an incredibly large scale, (out of
-my own spare time) a Tolkienesque fantasy world that will have every detail present; and
-which anyone can use to contribute to, or use as a setting for a potential work.</p>
-<p>I’ve been particularly interested in how the mind works, as well as a passing interest in Astrology, I’m a Scorpio, take what you will from it.</p>
+<p>I am constantly tinkering around with computers and doing various projects with them (such as making a podcast generation
+software written in Python,
+<a href="https://bitbucket.org/AtlasJan/pcc">PCC</a>, it's still a work-in-progress, though), I am also attempting a project of an
+incredibly large scale, (out of my own spare time)
+a Tolkienesque fantasy world that will have every detail present; and which anyone can use to contribute to, or use as a setting
+for a potential work.</p>
+<p>I’ve been particularly interested in how the mind works, as well as a passing interest in Astrology, I’m a Scorpio, take what
+you will from it.</p>
 
 <h1>Contact</h1>
 <p>My primary contact details are:</p>
@@ -183,14 +123,15 @@ which anyone can use to contribute to, or use as a setting for a potential work.
 </ul>
 
 <p>Details are also available in <a href="../ArchieSullivan.vcf">vCard</a> format, as well.</p>
-<p>I also have a PGP <a>key</a>, if you wish to encrypt your transmissions.</p>
+<p>I also have a PGP <a href="archie.asc">key</a>, if you wish to encrypt your transmissions.</p>
 <div id="display">
 Display-in-Page: 
-<button type="button" onClick="">vCard</button>
-<button type="button" onClick="pgp()">PGP Key</button>
+<button type="button" onClick="vcf.run()">vCard</button>
+<button type="button" onClick="pgp.run()">PGP Key</button>
 <button type="button" onClick="hide()">Hide</button><br />
 <noscript>Unable to load: Browser has no JavaScript support, or has it disabled</noscript><br />
 <pre id="code"></pre>
 </div>
 </body>
+<!--And end.-->
 </html>
