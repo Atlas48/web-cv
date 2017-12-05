@@ -10,3 +10,4 @@ body	{ font-family: sans-serif; background: whitesmoke }
 pre	{font-family: 'Fira Mono', monospace; background: black; color:#0f0}
 pre.no-fontface { font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;}
 table, tr, td {border: 1px solid black;}
+audio {margin:auto}
