@@ -3,22 +3,26 @@
 <head>
 <meta charset="utf-8">
 <title>My CV</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" />
 <script src="modernizr-custom.js"></script>
 <style>
+@import url('https://fonts.googleapis.com/css?family=Anton|Fira+Mono');
 table.GCSE td:nth-child(1), table.BTEC th {
-font-weight: bold;
-text-decoration:underline;
+	font-weight: bold;
+	text-decoration:underline;
 }
 //Mini Definitions!
 table.GCSE td:nth-child(1)::after, table.BTEC th {content: ":";}
+<<<<<<< HEAD
 .head {text-align: center;}
 .head h1 {padding-top: 100;}
+=======
+.head { text-align: center; }
+.head h1 { padding-left:auto; }
+>>>>>>> parent of 0195bd1... Add index.html
 #code {display:none;}
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-if ('jQuery' in window) console.log("jQuery Loaded.");
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="func.js">
 /*  
 @licstart  The following is the entire license notice for the 
@@ -43,23 +47,22 @@ through which recipients can access the Corresponding Source.
 @licend  The above is the entire license notice
 for the JavaScript code in this page.
 */
-$(document).ready(function(e) {
 vcf = new display(true);
 pgp = new display(false);
-function hide() { if (cs.is(":visible") cs.slideUp('fast').text("");}
-if (!Modernizr.webp) $("div.head > img").attr("src", "archie.jpg");
-$("div.head > img").on("click", function(){$(this).slideUp();});
-$("div.head > h1").on("click", function(e) {$("div.head > img").slideDown();});
+$(document).ready(function(e) {
+    function hide() { if (cs.is(":visible") cs.slideUp('fast').text("");}
+    if (Modernizr.webp) $("div.head > img").attr("src", "archie.webp");
 });
 </script>
 </head>
 <!--And begin!-->
 <body lang="EN-GB">
-<div class="lnk">
-<a href="index.html">Back to Index</a>
-</div>
 <div class="head">
+<<<<<<< HEAD
 <img src="pics/archie.webp" alt="A photograph depictirng a potential employee, Archie Sullivan." />
+=======
+<img src="archie.jpg" alt="A photograph depictirng a potential employee, Archie Sullivan." />
+>>>>>>> parent of 0195bd1... Add index.html
 <h1>Archie Sullivan</h1>
 </div>
 <h1>About</h1>

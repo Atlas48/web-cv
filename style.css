@@ -1,12 +1,12 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Anton|Fira+Mono');
 /*Main CSS Document,
 used across all places*/
+
 h1, h2	{ font-family: 'Anton', sans-serif; text-decoration: underline; }
+h1 { padding-left: 0.5% }
 h2 { padding-left: 1% }
 h1.no-fontface, h2.no-fontface {font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;}
-.lnk > a {font-family: auto; size:10px}
-body	{ font-family: sans-serif; background: whitesmoke }
+body	{ font-family: sans-serif; background: #f5eff5 }
 pre	{font-family: 'Fira Mono', monospace; background: black; color:#0f0}
 pre.no-fontface { font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;}
 table, tr, td {border: 1px solid black;}
