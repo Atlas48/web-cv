@@ -3,28 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact Me</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+ crossorigin="anonymous">
+  $(document).ready(function() {
+	  var tm = $("#tel-mob"); var tl = $("#tel-land");
+  </script>
+  <script src="js/nav.coffee"></script>
 </head>
 <body>
   <h1>Contact</h1>
 <p>My primary contact details are:</p>
 <ul>
-<li><u>Email:</u> <a href="mailto:AtlasJan@gmx.com">AtlasJan@gmx.com</a></li>
+<li><a  href="mailto:AtlasJan@gmx.com">Email:</a> AtlasJan@gmx.com</li>
 <li><u>First Name:</u> Archie</li>
 <li><u>Last Name:</u> Sullivan</li>
-<li><u>Mobile:</u> +44</li>
-<li><u>Landline:</u> +44</li>
-<li><u>Address:</u> 69, The Street; High Halstow; Kent; ME3 8SJ; United Kingdom;</li>
+<li><a href="tel:+447376-383909">Mobile:</a> <span id="tel-mob">+447376-383909</span></li>
+<li><a href="tel:+441634-252093">Landline:</a> <span id="tel-land">+441634-252093</span></li>
+<li><u>Address:</u><ul><li>69, The Street;</li><li>High Halstow;</li><li>Kent;</li><li>ME3 8SJ;</li><li>United Kingdom;</li></ul></li>
 </ul>
-
 <p>Details are also available in <a href="ArchieSullivan.vcf">vCard</a> format, as well.</p>
 <p>I also have a PGP <a href="archie.asc">key</a>, if you wish to encrypt your transmissions.</p>
 <div id="display">
 Display-in-Page: 
 <button type="button" onClick="vcf.run()">vCard</button>
 <button type="button" onClick="pgp.run()">PGP Key</button>
-<button type="button" onClick="hide()">Hide</button><br />
+<button type="button" onClick="hide()">Both</button><br />
 <noscript>Unable to load: Browser has no JavaScript support, or has it disabled</noscript><br />
 <pre id="code"></pre>
+</div>
+<hr />
+<div id="end">
+<a href="">Previous</a>&nbsp;
 </div>
 </body>
 </html>

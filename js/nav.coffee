@@ -1,13 +1,13 @@
-### CODE WORK IN PROGRESS
-HIGHLY SUBJECT TO CHANGE ###
+###CODE WORK IN PROGRESS
+HIGHLY SUBJECT TO CHANGE###
 
-w = $ "#link-home"
-a = $ "#link-left"
-d = $ "#link-right"
+prev = $("div.lnk").children("a").eq 0
+up   = $("div.lnk").children("a").eq 1
+next = $("div.lnk").children("a").eq 2
 
-$("body").keydown (e) ->
-  switch e.keyCode
-    when 37,65 then a.click() #left arrow/a key
-    when 39,68 then d.click() #right arrow/d key
-    when 38,87 then w.click() #up arrow/w key
 
+$("body").keypress (e) ->
+   switch e.key
+      when 'a' then prev.click()
+      when 'w' then up.click()
+      when 'd' then next.click()

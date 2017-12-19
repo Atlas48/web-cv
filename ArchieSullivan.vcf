@@ -1,7 +1,9 @@
 BEGIN:VCARD
-VERSION:2.1
+VERSION:4.0
 N:Sullivan;Archie;;;
 FN:Archie Sullivan
+NICKNAME:Atlas
+GENDER:M
 X-PHONETIC-FIRST-NAME:["A:tSi]
 X-PHONETIC-MIDDLE-NAME:[to"m}s]
 X-PHONETIC-LAST-NAME:["S@.li.v}n]
@@ -87,7 +89,6 @@ PHOTO;ENCODING=BASE64;JPEG:/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwM
  87bCd4jPbsTJ5PTcPvIemfp/L6V6HpPxEv5dKt9Nu5BPaRDEW77yDOeD378H869mjjKTTjWj8
  0fI47h+tB+0wk2/J/p/wfvP/9k=
 
-BDAY:1998-10-30
-X-JABBER:Atlas69@jabber.earth.li
-X-JABBER:atlasjan@jabber.sdf.org
+IMPP:xmpp:Atlas69@jabber.earth.li
+IMPP:xmpp:atlasjan@jabber.sdf.org
 END:VCARD
