@@ -1,5 +1,3 @@
-/*CODE WORK IN PROGRESS
-HIGHLY SUBJECT TO CHANGE*/
 var next, prev, up;
 
 prev = $("div.lnk").children("a").eq(0);
