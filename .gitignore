@@ -1,7 +1,6 @@
 #Temporary files are forbidden
-*tmp*
-*temp*
+*[tT][mM][pP]*
+*[tT][eE][mM][pP]*
 *.swp
 *~
 \#*\#
-cv.html
