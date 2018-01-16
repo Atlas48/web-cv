@@ -14,3 +14,4 @@ audio {margin:auto}
 .end > a {font-family: serif; size:10px;}
 img.no-webp[src$=wepb] { display: none; }
 img[src$=jpg] { display: none; }
+div.end > ul > li { font-size: 0.75em; }
