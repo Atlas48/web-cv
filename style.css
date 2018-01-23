@@ -8,8 +8,7 @@ h2		{ padding-left: 1% }
 h1.no-fontface, h2.no-fontface {font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;}
 pre		{font-family: 'Fira Mono', monospace; background: black; color:#0f0; size:10}
 pre.no-fontface { font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;}
-table, tr, td {border: 1px solid black;}
-audio {margin:auto}
+table, tr, td, th {border: 1px solid black;}
 /*class stuff*/
 .end > a {font-family: serif; size:10px;}
 img.no-webp[src$=wepb] { display: none; }
